@@ -11,5 +11,11 @@ class App < Sinatra::Base
     @squared_number = params[:number].to_i
     "#{@squared_number * @squared_number}"
   end
+  
+  get "/say/:number/:phrase" do 
+    @phrase = params[:phrase]
+    @number = params[:number]
+    while @number > 0
+    "#{@phrase}"
 
 end
